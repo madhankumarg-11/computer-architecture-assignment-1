@@ -1,0 +1,48 @@
+1.Signed binary arithmetic using 8 bit
+
+This Python program performs 8-bit 2’s complement binary addition and subtraction. It converts decimal numbers into 8-bit binary, performs binary addition, calculates the carry-in and carry-out of the most significant bit (MSB), and detects arithmetic overflow.
+
+
+Explanation of Functions
+
+1. to_twos_complement_8bit(val)
+
+.Converts a decimal integer into an 8-bit binary number.
+.Uses val & 0xFF to retain only the lowest 8 bits.
+
+2. add_8bit_binary(bin_str1, bin_str2)
+
+.Adds two 8-bit binary numbers bit by bit.
+.Calculates the carry for each bit.
+.Returns the binary sum, carry-in to the sign bit, and carry-out from the sign bit.
+
+3. analyze_operation(op1, op2, operation_type)
+
+.Converts both operands into 8-bit binary.
+.Performs addition or subtraction using 2’s complement.
+.Converts the binary result back to a signed decimal number.
+.Checks for arithmetic overflow by comparing the carry-in and carry-out of the sign bit.
+
+
+
+2.rotate operations on 8 bit
+
+This Python program demonstrates two types of 8-bit binary rotation operations: Rotate Right Without Carry (ROR) and Rotate Right Through Carry (RCR). It performs each operation three times on the binary number 11010101 and displays the result at every step.
+
+1. Rotate Right Without Carry (ROR)
+
+.The ror(n, k) function rotates the bits to the right by k positions.
+.The bits shifted out from the right side are moved back to the left side.
+.The operation does not use a carry flag.
+.The program performs the rotation three times and prints each intermediate result.
+
+2. Rotate Right Through Carry (RCR)
+
+.The rcr(n, carry, k) function is defined to rotate bits through a carry flag.
+.In the main program, the rightmost bit becomes the new carry.
+.The previous carry enters the leftmost bit.
+.The operation is repeated three times, displaying the binary result and carry after each step.
+
+Conclusion
+
+This program explains the difference between ROR and RCR operations in computer organization. ROR rotates bits within the 8-bit number, whereas RCR rotates bits through the carry flag, making the carry part of the rotation process.
